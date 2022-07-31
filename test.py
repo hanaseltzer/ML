@@ -10,8 +10,6 @@ results = train_y
 data = []
 i = 0
 for image, result in zip(images, results):
-    # if i > 300:
-    #     break
     i += 1
     inputs = []
     for row in image:

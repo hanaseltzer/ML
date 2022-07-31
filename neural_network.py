@@ -16,14 +16,6 @@ class NeuralNetwork:
         layers.append(Layer(output_neuron_count))
         return layers
 
-    # def iterate(self, neuron_func, conn_func, backwards=False):
-    #     layers = self.layers if not backwards else self.layers[::-1]
-    #     for layer in layers:
-    #         for i, neuron in enumerate(layer):
-    #             neuron_func(neuron, i)
-    #             for j, conn in enumerate(neuron):
-    #                 conn_func(conn, j)
-
     def set_weights_and_biases(self, weights_and_biases_=None):
         if not weights_and_biases_:
             weights_and_biases = weights_and_biases_
@@ -98,11 +90,7 @@ class NeuralNetwork:
             succeeded = 0
             batch = data[batch_size*i:batch_size*(i + 1)]
             for inputs, output in batch:
-                # inputs = [value/255 for value in inputs]
                 a = array_2_number(self.calc(inputs))
-                # print(a)
-                # print(output)
-                # print('-'*20)
                 if a == output:
                     succeeded += 1
                 if count == 0:
@@ -116,7 +104,7 @@ class NeuralNetwork:
             changes = [x / count for x in changes]
             cost /= count
             self.adjust_weights_and_biases(changes)
-            # succeeded = int(100 * (succeeded / count))
+            succeeded = int(100 * (succeeded / count))
             print(f'cost: {cost}\n succeeded: {succeeded}')
             i += 1
 
@@ -131,20 +119,3 @@ class NeuralNetwork:
                         params.append(previous_layer_neuron.in_cons[i].weight)
             previous_layer = layer
         return params[::-1]
-
-
-# data = [([0, 0, 1], 2), ([0, 1, 0], 2), ([1, 0, 0], 1)]
-# for i in range(20):
-#     data.extend(data)
-# print(len(data))
-# random.shuffle(data)
-# nn = NeuralNetwork(3, 2, 2, 3)
-
-
-# params = nn.backpropagation(1)
-# print('')
-# nn.learn(data, 2)
-# a = nn.calc([0, 0, 1])
-# print(a)
-# a = nn.calc([1, 0, 0])
-# print(a)
