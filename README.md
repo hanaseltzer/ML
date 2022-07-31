@@ -1,6 +1,6 @@
 # ML
 neural network
-input_neuron_count, output_neuron_count, hidden_layers_count, hidden_layer_neuron_count, weights_and_biases
+
 ## NeuralNetwork()
 >### object initialization
 
