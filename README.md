@@ -20,3 +20,23 @@ neural network
 
 #### *weights_and_biases (optional) -*
 > List of predefined weights and biases we want the neural network to have.
+
+
+
+## learn()
+>### running over large list of datasets and learn from them.
+
+### method params:
+
+#### *data -*
+> A list of datasets, a dataset is an array with two values.
+> the first value is an array containing the input values
+> the second value is an integer or array represnting the wanted output. 
+
+#### *batch_size -*
+> The amount of datasets per batch.
+
+#### *time_to_stop_func (optional) -*
+> A function that returns boolean false while running
+> and true when we want to stop learning.
+> if not specified will stop after running over all the data
