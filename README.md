@@ -29,14 +29,14 @@ neural network
 ### method params:
 
 #### *data -*
-> A list of datasets, a dataset is an array with two values.
-> the first value is an array containing the input values
+> A list of datasets, a dataset is an array with two values. <br />
+> the first value is an array containing the input values <br />
 > the second value is an integer or array represnting the wanted output. 
 
 #### *batch_size -*
 > The amount of datasets per batch.
 
 #### *time_to_stop_func (optional) -*
-> A function that returns boolean false while running
-> and true when we want to stop learning.
+> A function that returns boolean false while running <br />
+> and true when we want to stop learning. <br />
 > if not specified will stop after running over all the data
