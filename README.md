@@ -39,3 +39,15 @@ neural network
 > A function that returns boolean false while running <br />
 > and true when we want to stop learning. <br />
 > if not specified will stop after running over all the data
+
+
+## calc()
+>### calculate ai result for inputs array sample.
+
+### method params:
+
+#### *inputs -*
+> An array containing the input values
+
+### method output:
+> result array, representing the values of the output layer.
