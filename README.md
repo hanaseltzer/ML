@@ -21,8 +21,8 @@ neural network
 #### *weights_and_biases (optional) -*
 > List of predefined weights and biases we want the neural network to have.
 
-
-
+ <br />
+ <br />
 ## learn()
 >### running over large list of datasets and learn from them.
 
