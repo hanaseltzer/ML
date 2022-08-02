@@ -35,7 +35,6 @@ def array_2_number(array):
 def get_value():
     value = 0
     negative = bool(random.randint(0, 1))
-    intenger = bool(random.randint(0, 1))
     while value in (0.0, 1.0):
         value = round(random.random(), 1)
     if negative:
