@@ -1,4 +1,4 @@
-# ML
+# Deep Learning
 <!-- neural network -->
 ![alt text](https://cdn.pixabay.com/photo/2020/06/02/09/39/banner-5250178__340.jpg)
 ## NeuralNetwork()
